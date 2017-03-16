@@ -1,0 +1,30 @@
+name: ubuntu-tutorials 
+version: '1.0'
+summary: ubuntu webapp
+description: |
+  Webapp version of the ubuntu web application.
+
+grade: stable
+confinement: strict
+parts:
+  webapp-container:
+    plugin: nil    
+    after: [desktop-ubuntu-app-platform, webapp-helper]
+plugs:
+  browser-sandbox:
+    interface: browser-support
+    allow-sandbox: false
+  platform:
+    interface: content
+    content: ubuntu-app-platform1
+    target: ubuntu-app-platform
+    default-provider: ubuntu-app-platform
+apps:
+  ubuntu-tutorials:
+    command: webapp-launcher  --webappUrlPatterns=https?://tutorials.ubuntu.com/* http://tutorials.ubuntu.com/
+    # --enable-back-forward  (exibe botão de voltar no app)
+    plugs:
+      - browser-sandbox
+      - network
+      - opengl
+      - unity7

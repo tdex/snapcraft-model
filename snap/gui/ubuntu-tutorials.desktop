@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+Terminal=false
+Exec=ubuntu-tutorials
+Name=Ubuntu Tutorials
+Icon=${SNAP}/meta/gui/ubuntu.png
