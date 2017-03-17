@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+Terminal=false
+Exec=tarcisio
+Name=Tarcísio Deschamps
+Icon=${SNAP}/meta/gui/tarcisio.png

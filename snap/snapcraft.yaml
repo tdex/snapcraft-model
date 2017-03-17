@@ -1,8 +1,8 @@
-name: ubuntu-tutorials 
+name: tarcisio
 version: '1.0'
-summary: ubuntu webapp
+summary: Portfólio
 description: |
-  Webapp version of the ubuntu web application.
+  Aplicações de Tarcísio Deschamps.
 
 grade: stable
 confinement: strict
@@ -20,8 +20,8 @@ plugs:
     target: ubuntu-app-platform
     default-provider: ubuntu-app-platform
 apps:
-  ubuntu-tutorials:
-    command: webapp-launcher  --webappUrlPatterns=https?://tutorials.ubuntu.com/* http://tutorials.ubuntu.com/
+  tarcisio:
+    command: webapp-launcher  --webappUrlPatterns=http://tdex.github.io/tarcisiodeschamps.com.br/* http://tdex.github.io/tarcisiodeschamps.com.br/
     # --enable-back-forward  (exibe botão de voltar no app)
     plugs:
       - browser-sandbox
